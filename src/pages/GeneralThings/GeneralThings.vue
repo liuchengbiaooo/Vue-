@@ -1,5 +1,5 @@
 <template>
-
+  <div>识物</div>
 </template>
 
 <script>

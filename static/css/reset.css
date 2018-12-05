@@ -96,3 +96,11 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+  overflow: hidden;
+  -zoom:1;
+}
