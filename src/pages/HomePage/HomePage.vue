@@ -39,30 +39,12 @@
     </div>
     <div class="m-indexServicePolicy active">
       <ul class="g-grow">
-        <li class="item">
+        <li class="item" v-for="(policydesc,index) in policydesclist" :key="index">
           <a>
             <i class="u-icon u-icon-servicePolicy-index"
-               style="background-image:url(http://yanxuan.nosdn.127.net/cae45612b8aae577d8bd73338e2fc02c.png);"></i>
+               :style="{backgroundImage:`url('${policydesc.icon}')`}"></i>
             <span class="text">
-                网易自营品牌
-            </span>
-          </a>
-        </li>
-        <li class="item">
-          <a>
-            <i class="u-icon u-icon-servicePolicy-index"
-               style="background-image:url(http://yanxuan.nosdn.127.net/cae45612b8aae577d8bd73338e2fc02c.png);"></i>
-            <span class="text">
-                30天无忧退货
-            </span>
-          </a>
-        </li>
-        <li class="item">
-          <a>
-            <i class="u-icon u-icon-servicePolicy-index"
-               style="background-image:url(http://yanxuan.nosdn.127.net/cae45612b8aae577d8bd73338e2fc02c.png);"></i>
-            <span class="text">
-                48小时快速退款
+                {{policydesc.desc}}
             </span>
           </a>
         </li>
@@ -70,47 +52,11 @@
     </div>
     <div class="container">
       <div class="wrapper">
-        <div class="list">
+        <div class="list" v-for="(kingKong,index) in kingkong.kingKongList" :key="index">
           <div class="icon">
-            <img src="http://yanxuan.nosdn.127.net/98b6a6fc32f1fea861934816729e2cf5.png"/>
+            <img :src="kingKong.picUrl"/>
           </div>
-          <span class="txt">居家</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/46d33b9a9fbb659fcbac37ec58d51e62.png"/></div>
-          <span class="txt">鞋包配饰</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/31831ada59dc10319cba195620ed9ed0.png"/></div>
-          <span class="txt">服装</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/45833c71d4b0d0de0755a20f893fa25f.png"/></div>
-          <span class="txt">电器</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/2fde77529e90a26427d1c02faa3bfbf6.png"/></div>
-          <span class="txt">婴童</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/fc3e359da08577228354da61ea912c99.png"/></div>
-          <span class="txt">餐厨</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/15e364ca93313bbd6e87dfcba7ae7b74.png"/></div>
-          <span class="txt">饮食</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/793bca13bb931475ea7f0c00299362bb.png"/></div>
-          <span class="txt">洗护</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/97eb6fd2c7ea76a3a42b9dafa3bd6543.png"/></div>
-          <span class="txt">文体</span>
-        </div>
-        <div class="list">
-          <div class="icon"><img src="http://yanxuan.nosdn.127.net/db5e2ce8c66f7db3f4282ecb24a64236.png"/></div>
-          <span class="txt">超级会员</span>
+          <span class="txt">{{kingKong.text}}</span>
         </div>
       </div>
     </div>
@@ -132,63 +78,21 @@
     <div class="m-bossRecommendModule active">
       <img src="https://yanxuan.nosdn.127.net/b36b6e2c6132b5980c047005f7520795.png">
     </div>
-    <div class="m-sceneLightShoppingGuideModule active">
-      <div>
+    <div class="m-sceneLightShoppingGuideModule">
+      <div v-for="(shop,index) in shopping" :key="index">
         <a class="m-styleBanner">
           <div class="title">
-            12.12爱吃福利社
+            {{shop.styleItem.title}}
           </div>
           <div class="desc">
-            暖冬美食荟萃
+            {{shop.styleItem.desc}}
           </div>
-          <div class="picList">
-            <img class="pic" src="http://yanxuan.nosdn.127.net/c24d528dfc4c043cad7cdb560d2b7764.png">
-            <img class="pic" src="http://yanxuan.nosdn.127.net/d36dc48ac4456816e60f1592f02e034d.png"/>
+          <div class="picList" v-for="(picUrl,index) in shop.styleItem.picUrlList" :key="index">
+            <img class="pic" :src="picUrl"/>
           </div>
         </a>
       </div>
-      <div>
-        <a class="m-styleBanner">
-          <div class="title">
-            12.12爱吃福利社
-          </div>
-          <div class="desc">
-            暖冬美食荟萃
-          </div>
-          <div class="picList">
-            <img class="pic" src="http://yanxuan.nosdn.127.net/362a8249b48d91d99604680b5471b507.png">
-            <img class="pic" src="http://yanxuan.nosdn.127.net/e1d2f0b529eddc9b645997d0f16e9aca.png"/>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a class="m-styleBanner">
-          <div class="title">
-            12.12爱吃福利社
-          </div>
-          <div class="desc">
-            暖冬美食荟萃
-          </div>
-          <div class="picList">
-            <img class="pic" src="http://yanxuan.nosdn.127.net/71536ef8ebef1a6bb8ba88b2b8107b85.png">
-            <img class="pic" src="http://yanxuan.nosdn.127.net/abf8da82c5363f6b31bfdc2de8caa496.png"/>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a class="m-styleBanner">
-          <div class="title">
-            12.12爱吃福利社
-          </div>
-          <div class="desc">
-            暖冬美食荟萃
-          </div>
-          <div class="picList">
-            <img class="pic" src="http://yanxuan.nosdn.127.net/855a0c57ab058ee6c41c1b11a6e594d4.png">
-            <img class="pic" src="http://yanxuan.nosdn.127.net/04763003a311710e58da2539bf573949.png"/>
-          </div>
-        </a>
-      </div>
+
     </div>
     <div class="m-indexFloor">
       <div class="moduleTitle">
@@ -201,14 +105,14 @@
               <div class="item">
                 <img
                   src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-               <div>
+                <div>
                  <span class="up">
                  6包/提 谷风一木 软抽...
                </span>
-                 <span class="down">
+                  <span class="down">
                ￥16.9
                </span>
-               </div>
+                </div>
               </div>
               <div class="item">
                 <img
@@ -424,93 +328,18 @@
       </div>
       <div class="m-indexItem m-goodGrid">
         <ul class="list">
-          <li class="item">
+          <li class="item" v-for="(newitem,index) in newitemlist" :key="index">
             <a href="#" class="good">
               <div class="hd">
                 <img
-                  src="http://yanxuan.nosdn.127.net/675dbc5080b33299d5b28a2009fc5d0a.png?imageView&quality=65&thumbnail=330x330">
+                  :src="newitem.listPicUrl">
               </div>
               <div class="name">
-                <span>悠长饱满，清香软糯</span>
-                <span class="mani">￥78</span>
+                <span>{{newitem.simpleDesc}}</span>
+                <span class="mani">￥{{newitem.retailPrice}}</span>
               </div>
-              <div class="tagWraper">
-                <p class="status gradientPrice">美食狂欢</p>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="good">
-              <div class="hd">
-                <img
-                  src="http://yanxuan.nosdn.127.net/675dbc5080b33299d5b28a2009fc5d0a.png?imageView&quality=65&thumbnail=330x330">
-              </div>
-              <div class="name">
-                <span>悠长饱满，清香软糯</span>
-                <span class="mani">￥78</span>
-              </div>
-              <div class="tagWraper">
-                <p class="status gradientPrice">美食狂欢</p>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="good">
-              <div class="hd">
-                <img
-                  src="http://yanxuan.nosdn.127.net/675dbc5080b33299d5b28a2009fc5d0a.png?imageView&quality=65&thumbnail=330x330">
-              </div>
-              <div class="name">
-                <span>悠长饱满，清香软糯</span>
-                <span class="mani">￥78</span>
-              </div>
-              <div class="tagWraper">
-                <p class="status gradientPrice">美食狂欢</p>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="good">
-              <div class="hd">
-                <img
-                  src="http://yanxuan.nosdn.127.net/675dbc5080b33299d5b28a2009fc5d0a.png?imageView&quality=65&thumbnail=330x330">
-              </div>
-              <div class="name">
-                <span>悠长饱满，清香软糯</span>
-                <span class="mani">￥78</span>
-              </div>
-              <div class="tagWraper">
-                <p class="status gradientPrice">美食狂欢</p>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="good">
-              <div class="hd">
-                <img
-                  src="http://yanxuan.nosdn.127.net/675dbc5080b33299d5b28a2009fc5d0a.png?imageView&quality=65&thumbnail=330x330">
-              </div>
-              <div class="name">
-                <span>悠长饱满，清香软糯</span>
-                <span class="mani">￥78</span>
-              </div>
-              <div class="tagWraper">
-                <p class="status gradientPrice">美食狂欢</p>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="good">
-              <div class="hd">
-                <img
-                  src="http://yanxuan.nosdn.127.net/675dbc5080b33299d5b28a2009fc5d0a.png?imageView&quality=65&thumbnail=330x330">
-              </div>
-              <div class="name">
-                <span>悠长饱满，清香软糯</span>
-                <span class="mani">￥78</span>
-              </div>
-              <div class="tagWraper">
-                <p class="status gradientPrice">美食狂欢</p>
+              <div class="tagWraper" v-if="newitem.promTag">
+                <p class="status gradientPrice">{{newitem.promTag}}</p>
               </div>
             </a>
           </li>
@@ -533,11 +362,11 @@
   import HomeHeader from "../../components/HomeHeader/HomeHeader.vue"
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
-
+  import {mapState} from "vuex"
   export default {
     name: "home-page",
     mounted() {
-      new Swiper('#swiper1', {
+       new Swiper('#swiper1', {
         //direction: 'vertical', // 垂直切换选项
         loop: true, // 循环模式选项
         // 如果需要分页器
@@ -548,14 +377,26 @@
           delay: 3000, //循环时间
         }
       }),
-        new Swiper('#swiper2', {
+       new Swiper('#swiper2', {
           //direction: 'vertical', // 垂直切换选项
           loop: false, // 循环模式选项
           // 如果需要分页器
           pagination: {
             el: '#p2',
           },
-        })
+        }),
+       this.$store.dispatch("getPolicydesclist")
+       this.$store.dispatch("getKingkongmodule")
+       this.$store.dispatch("getShopping")
+       this.$store.dispatch("getNewitemlist")
+    },
+    computed:{
+      ...mapState([
+        "newitemlist", //新品首发 大米 牛奶
+        "shopping",  //四个爱吃社
+        "kingkong", // 居家鞋包服装10个
+        "policydesclist" //退货，退款
+      ])
     },
     components: {
       HomeHeader,
@@ -736,7 +577,7 @@
                 width: 2.88rem;
                 height: 2.88rem;
               .down
-                  color #b4282d
+                color #b4282d
         #p2
           margin auto
           width: auto;
@@ -746,6 +587,7 @@
           bottom: .32rem;
           height: .16rem;
           position relative
+
   .m-flashSaleModule
     background-color white
     .cnt
@@ -838,39 +680,43 @@
       position: relative;
       z-index: 0;
       overflow: hidden;
-      .item
-        padding: 0 0 .17333rem !important;
-        margin-left: .26667rem;
-        width: 2.88rem;
-        float: left;
-        position: relative;
-        overflow: hidden;
-        background-color: #fff;
-        .good
-          display block
-          .hd
-            background-color: #f5f5f5;
-            border-radius: .05333rem;
-            position: relative;
-            img
-              width 100%
-          .name
-            color black
-            font-size: .32rem;
-            .mani
-              color red
-          .tagWraper
-            width: 100%;
-            z-index: 1;
-            margin: 0 0 .05333rem -.16rem;
-            height: .4rem;
-            overflow: hidden;
-            padding-left: 0;
-            .status
-              text-align center
-              color white
-              margin-left: .16rem;
-              background-color: #f48f18;
+      box-sizing border-box
+      .list
+        display: flex;
+        flex-wrap: wrap;
+        .item
+         padding: 0 0 .17333rem !important;
+         margin-left: .26667rem;
+         width: 2.88rem;
+         float: left;
+         position: relative;
+         overflow: hidden;
+         background-color: #fff;
+         .good
+           display block
+           .hd
+             background-color: #f5f5f5;
+             border-radius: .05333rem;
+             position: relative;
+             img
+               width 100%
+           .name
+             color black
+             font-size: .32rem;
+             .mani
+               color red
+           .tagWraper
+             width: 100%;
+             z-index: 1;
+             margin: 0 0 .05333rem -.16rem;
+             height: .4rem;
+             overflow: hidden;
+             padding-left: 0;
+             .status
+               text-align center
+               color white
+               margin-left: .16rem;
+               background-color: #f48f18;
 
   .m-ft
     border-top: 1px solid rgba(0, 0, 0, .15);

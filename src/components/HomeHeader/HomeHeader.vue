@@ -15,60 +15,11 @@
         <div class="m-tabs scroll">
           <header>
             <div class="inner">
-              <div class="list">
-                <div class="tab active">
+              <div class="list"> <!--active-->
+                <div class="tab" :class="{active:currentIndex===index}" v-for="(cate,index) in catelist" :key="index"
+                @click="todo(index)">
                         <span class="txt">
-                          推荐
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          居家
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          鞋包配饰
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          服装
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          电器
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          洗护
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          饮食
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          餐厨
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          婴童
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          文体
-                        </span>
-                </div>
-                <div class="tab">
-                        <span class="txt">
-                          特色区
+                          {{cate.name}}
                         </span>
                 </div>
               </div>
@@ -88,8 +39,14 @@
 
 <script>
   import BScroll from "better-scroll"
+  import {mapState} from "vuex"
   export default {
     name: "home-page",
+    data(){
+      return{
+        currentIndex:0
+      }
+    },
     mounted(){
       this.$nextTick(()=>{
         new BScroll(".inner",{
@@ -97,7 +54,16 @@
           scrollX:true  //水平滑动
         })
       })
+      this.$store.dispatch("getCatelist")
     },
+    computed:{
+      ...mapState(["catelist"])
+    },
+    methods:{
+      todo(index){
+         this.currentIndex = index
+      }
+    }
   }
 </script>
 
