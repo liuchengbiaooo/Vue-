@@ -5,7 +5,11 @@ import {
   RECEIVE_NEWITEMLIST,
   RECEIVE_KINGKONGMODULE,
   RECEIVE_BIGPROMOTION,
-  RECEIVE_CATEGORY
+  RECEIVE_CATEGORY,
+  RECEIVE_PERSONAL,
+  RECEIVE_GETTABS,
+  RECEIVE_GENERALTHINGS,
+  RECEIVE_GENERALTHINGLIST
 } from "./mutation-types"
 
 
@@ -31,12 +35,32 @@ export default {
   [RECEIVE_NEWITEMLIST](state,{newitemlist}){
      state.newitemlist=newitemlist
   },
-  //三个图 轮播
+  //限时
   [RECEIVE_BIGPROMOTION](state,{bigpromotion}){
      state.bigpromotion=bigpromotion
   },
   //第二页分类
   [RECEIVE_CATEGORY](state,{category}){
      state.category=category
+  },
+
+  //三个图 轮播
+  [RECEIVE_PERSONAL](state,{personal}){
+     state.personal = personal
+  },
+
+  //识物分类
+  [RECEIVE_GETTABS](state,{gettabs}){
+     state.gettabs = gettabs
+  },
+
+  //识物的数据
+  [RECEIVE_GENERALTHINGS](state,{generalthings}){
+     state.generalthings = generalthings
+  },
+
+  //更新的数据
+  [RECEIVE_GENERALTHINGLIST](state,{generalthinglist}){
+     state.generalthinglist = generalthinglist
   }
 }

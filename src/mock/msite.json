@@ -13021,5 +13021,488 @@
       "title": "新人拼团",
       "targetUrl": "https://m.you.163.com/pin/item/list"
     }
+  ],
+  "personalTailorModule": [
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/a10ed5c19533c9e1e2abf1d8cb843c24.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/a10ed5c19533c9e1e2abf1d8cb843c24.png",
+      "tagId": 0,
+      "simpleDesc": "100%原木浆，融水即化",
+      "primarySkuPreSellPrice": 0,
+      "limitedFlag": 0,
+      "newItemFlag": false,
+      "itemTagList": [],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1077003",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1077003,
+      "sellVolume": 77672,
+      "isCouponConflict": false,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/a10ed5c19533c9e1e2abf1d8cb843c24.png",
+      "pieceUnitDesc": "个",
+      "resourcesId": 1,
+      "name": "10卷/提 谷风一木 小卷纸",
+      "productPlace": "",
+      "counterPrice": 27.90,
+      "couponPrice": 0,
+      "retailPrice": 27.90,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/6da3c6ce0233411e55434e06c8e51a3b.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/eb87709f92843bd6eddf9cb7a2b01688.png",
+      "tagId": 0,
+      "simpleDesc": "智能电动 深层洁净肌肤",
+      "primarySkuPreSellPrice": 0,
+      "promTag": "心跳价",
+      "limitedFlag": 204,
+      "newItemFlag": false,
+      "itemTagList": [
+        {
+          "itemId": 1189013,
+          "tagId": 9400549,
+          "name": "爆品",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 0
+        },
+        {
+          "itemId": 1189013,
+          "tagId": 127886057,
+          "name": "心跳价",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 2
+        }
+      ],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1189013",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1189013,
+      "sellVolume": 1350,
+      "isCouponConflict": true,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/6da3c6ce0233411e55434e06c8e51a3b.png",
+      "pieceUnitDesc": "件",
+      "resourcesId": 2,
+      "name": "电动式硅胶洁面仪",
+      "productPlace": "",
+      "counterPrice": 119.00,
+      "couponPrice": 0,
+      "retailPrice": 94.6,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/74452c652a03866b6de171362f9ab4a8.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/122a30188b07fa93daf3257da917296b.png",
+      "tagId": 0,
+      "simpleDesc": "瞬间吸尘，无线自由，家居/汽车两用",
+      "primarySkuPreSellPrice": 0,
+      "promTag": "三石福利价",
+      "limitedFlag": 204,
+      "newItemFlag": false,
+      "itemTagList": [
+        {
+          "itemId": 1401006,
+          "tagId": 127878234,
+          "name": "三石福利价",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 2
+        }
+      ],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1401006",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1401006,
+      "sellVolume": 7892,
+      "isCouponConflict": true,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/74452c652a03866b6de171362f9ab4a8.png",
+      "pieceUnitDesc": "件",
+      "resourcesId": 3,
+      "name": "网易智造T300无线吸尘器",
+      "productPlace": "",
+      "counterPrice": 1599.00,
+      "couponPrice": 0,
+      "retailPrice": 1229,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/4b72ba8cdcf9eccd3ed1e6be35b09ab8.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/4b72ba8cdcf9eccd3ed1e6be35b09ab8.png",
+      "tagId": 0,
+      "simpleDesc": "高档、精致、省心的礼赠佳品",
+      "primarySkuPreSellPrice": 0,
+      "limitedFlag": 0,
+      "newItemFlag": false,
+      "itemTagList": [],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1076017",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1076017,
+      "sellVolume": 12346,
+      "isCouponConflict": false,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/4b72ba8cdcf9eccd3ed1e6be35b09ab8.png",
+      "pieceUnitDesc": "件",
+      "resourcesId": 4,
+      "name": "严选礼品卡 300元面值",
+      "productPlace": "",
+      "counterPrice": 300.00,
+      "couponPrice": 0,
+      "retailPrice": 300.00,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/1e112d632a40935aae55b14c529000a0.jpg",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/2eb0624b89d2cce1a5fb13187a0c10d8.jpg",
+      "tagId": 0,
+      "simpleDesc": "超柔针织棉，亲肤可裸睡",
+      "primarySkuPreSellPrice": 0,
+      "promTag": "明星特惠价",
+      "limitedFlag": 204,
+      "newItemFlag": false,
+      "itemTagList": [
+        {
+          "itemId": 1110003,
+          "tagId": 9400549,
+          "name": "爆品",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 0
+        },
+        {
+          "itemId": 1110003,
+          "tagId": 127886022,
+          "name": "明星特惠价",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 2
+        }
+      ],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1110003",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1110003,
+      "sellVolume": 17311,
+      "isCouponConflict": true,
+      "colorNum": 5,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/1e112d632a40935aae55b14c529000a0.jpg",
+      "pieceUnitDesc": "件",
+      "resourcesId": 5,
+      "name": "全棉针织条纹四件套 新款",
+      "productPlace": "",
+      "counterPrice": 299.00,
+      "couponPrice": 0,
+      "retailPrice": 269,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/ff727609ee2f7e76a16314af7f5876ff.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/50c78eb5b3984bea02a5c172627d6cc5.png",
+      "tagId": 0,
+      "simpleDesc": "仅售供应商建议价的1/7",
+      "primarySkuPreSellPrice": 0,
+      "promTag": "心跳价",
+      "limitedFlag": 204,
+      "newItemFlag": false,
+      "itemTagList": [
+        {
+          "itemId": 1023003,
+          "tagId": 127886057,
+          "name": "心跳价",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 2
+        }
+      ],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1023003",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1023003,
+      "sellVolume": 2604,
+      "isCouponConflict": true,
+      "colorNum": 2,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/ff727609ee2f7e76a16314af7f5876ff.png",
+      "pieceUnitDesc": "只",
+      "resourcesId": 6,
+      "name": "100年传世珐琅锅 全家系列",
+      "productPlace": "",
+      "counterPrice": 398.00,
+      "couponPrice": 0,
+      "retailPrice": 315,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/6df81c2f8582dbc597acadf8f1089a6a.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/8b7bde0b395e2bda54505cf4c3b7880b.png",
+      "tagId": 0,
+      "simpleDesc": "优质选料 拒绝添加",
+      "primarySkuPreSellPrice": 0,
+      "promTag": "美食狂欢",
+      "limitedFlag": 204,
+      "newItemFlag": false,
+      "itemTagList": [
+        {
+          "itemId": 1115009,
+          "tagId": 127887052,
+          "name": "美食狂欢",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 2
+        }
+      ],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1115009",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1115009,
+      "sellVolume": 30169,
+      "isCouponConflict": true,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/6df81c2f8582dbc597acadf8f1089a6a.png",
+      "pieceUnitDesc": "件",
+      "resourcesId": 7,
+      "name": "每日坚果",
+      "productPlace": "2个规格",
+      "counterPrice": 35.80,
+      "couponPrice": 0,
+      "retailPrice": 29.9,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/92d8551bba1f14e045bbb44edadf4669.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/2d43d642d928240ef2013e8da1c133b2.png",
+      "tagId": 1080000,
+      "simpleDesc": "有效吸收甲醛、去除空间异味",
+      "primarySkuPreSellPrice": 0,
+      "limitedFlag": 0,
+      "newItemFlag": false,
+      "itemTagList": [
+        {
+          "itemId": 1621025,
+          "tagId": 9400549,
+          "name": "爆品",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 0
+        }
+      ],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1621025",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1621025,
+      "sellVolume": 93636,
+      "isCouponConflict": false,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/92d8551bba1f14e045bbb44edadf4669.png",
+      "tagName": "海外制造商",
+      "pieceUnitDesc": "件",
+      "resourcesId": 8,
+      "name": "美国制造 除甲醛空气净化剂227g",
+      "productPlace": "美国制造",
+      "counterPrice": 45.00,
+      "couponPrice": 0,
+      "retailPrice": 45.00,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/826649d50790c8608b6620d8e68d594b.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/3767dc4e30cf9934592e0612553b8232.png",
+      "tagId": 0,
+      "simpleDesc": "一双罗纹中筒袜，可以在森系、韩系、法式慵懒风之间自由切换。",
+      "primarySkuPreSellPrice": 0,
+      "limitedFlag": 0,
+      "newItemFlag": false,
+      "itemTagList": [],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1654005",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1654005,
+      "sellVolume": 18341,
+      "isCouponConflict": false,
+      "colorNum": 5,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/826649d50790c8608b6620d8e68d594b.png",
+      "pieceUnitDesc": "件",
+      "resourcesId": 9,
+      "name": "3双/5双装 女式日系罗纹中筒袜",
+      "productPlace": "",
+      "counterPrice": 36.90,
+      "couponPrice": 0,
+      "retailPrice": 36.90,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/5dbe801ee7900269049b7d3b4ec02071.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/afefef84a592743d93b85b8d11bbc707.png",
+      "tagId": 0,
+      "simpleDesc": "进口优质原料，无食品添加剂",
+      "primarySkuPreSellPrice": 0,
+      "promTag": "三石福利价",
+      "limitedFlag": 204,
+      "newItemFlag": false,
+      "itemTagList": [
+        {
+          "itemId": 1197009,
+          "tagId": 127878234,
+          "name": "三石福利价",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 2
+        }
+      ],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1197009",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1197009,
+      "sellVolume": 3701,
+      "isCouponConflict": true,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/5dbe801ee7900269049b7d3b4ec02071.png",
+      "pieceUnitDesc": "件",
+      "resourcesId": 10,
+      "name": "柔风黄油曲奇",
+      "productPlace": "2个口味",
+      "counterPrice": 98.00,
+      "couponPrice": 0,
+      "retailPrice": 78,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/b45ba40f775dea2519ea1662f1cd5568.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/b83a8665307f610644fb47ac3f77663d.png",
+      "tagId": 1080000,
+      "simpleDesc": "DFA获奖设计，趣味懒人福音",
+      "primarySkuPreSellPrice": 0,
+      "limitedFlag": 0,
+      "newItemFlag": false,
+      "itemTagList": [],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1542000",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1542000,
+      "sellVolume": 6930,
+      "isCouponConflict": false,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/b45ba40f775dea2519ea1662f1cd5568.png",
+      "tagName": "海外制造商",
+      "pieceUnitDesc": "件",
+      "resourcesId": 11,
+      "name": "韩国制造 懒人多功能抱枕桌lazyman",
+      "productPlace": "韩国制造",
+      "counterPrice": 199.00,
+      "couponPrice": 0,
+      "retailPrice": 199.00,
+      "status": 2
+    },
+    {
+      "scenePicUrl": "http://yanxuan.nosdn.127.net/605dd2b0cc17c3b39b82cf08990f4e1e.png",
+      "listPicUrl": "http://yanxuan.nosdn.127.net/c4fdf424a6fe776a26de14aaa5c39511.png",
+      "tagId": 1034001,
+      "simpleDesc": "1天1人仅手作2只的珍贵品质",
+      "primarySkuPreSellPrice": 0,
+      "limitedFlag": 0,
+      "newItemFlag": false,
+      "itemTagList": [
+        {
+          "itemId": 1193007,
+          "tagId": 127878236,
+          "name": "满额减",
+          "subType": 0,
+          "forbidJump": false,
+          "type": 2
+        }
+      ],
+      "primarySkuPreSellStatus": 0,
+      "pieceNum": 0,
+      "extra": {
+        "recommend": {
+          "itemId": "1193007",
+          "rcmdSerinalNum": "7d06a547d5a177720001bb29b18f280e#2.0.0.0"
+        },
+        "modelType": 2
+      },
+      "id": 1193007,
+      "sellVolume": 876,
+      "isCouponConflict": false,
+      "colorNum": 0,
+      "primaryPicUrl": "http://yanxuan.nosdn.127.net/605dd2b0cc17c3b39b82cf08990f4e1e.png",
+      "tagName": "Alexander McQueen制造商",
+      "pieceUnitDesc": "件",
+      "resourcesId": 12,
+      "name": "搭扣头层牛皮手提单肩包",
+      "productPlace": "",
+      "counterPrice": 759.00,
+      "couponPrice": 0,
+      "retailPrice": 759.00,
+      "status": 2
+    }
   ]
 }

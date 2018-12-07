@@ -102,133 +102,59 @@
         <div class="swiper-container" id="swiper2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="item">
+              <div class="item" v-for="(categorys,index) in categorysArr[0]" :key="index">
                 <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
+                  :src="categorys.listPicUrl"/>
                 <div>
                  <span class="up">
-                 6包/提 谷风一木 软抽...
+                 {{categorys.name}}
                </span>
                   <span class="down">
-               ￥16.9
+               ￥{{categorys.counterPrice}}
                </span>
                 </div>
               </div>
-              <div class="item">
+            </div>
+            <div class="swiper-slide">
+              <div class="item" v-for="(categorys,index) in categorysArr[1]" :key="index">
                 <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
-              </div>
-              <div class="item">
-                <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
+                  :src="categorys.listPicUrl"/>
+                <div>
+                 <span class="up">
+                 {{categorys.name}}
+               </span>
+                  <span class="down">
+               ￥{{categorys.counterPrice}}
+               </span>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="item">
+              <div class="item" v-for="(categorys,index) in categorysArr[2]" :key="index">
                 <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
-              </div>
-              <div class="item">
-                <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
-              </div>
-              <div class="item">
-                <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
+                  :src="categorys.listPicUrl"/>
+                <div>
+                 <span class="up">
+                 {{categorys.name}}
+               </span>
+                  <span class="down">
+               ￥{{categorys.counterPrice}}
+               </span>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="item">
+              <div class="item" v-for="(categorys,index) in categorysArr[3]" :key="index">
                 <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
-              </div>
-              <div class="item">
-                <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
-              </div>
-              <div class="item">
-                <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="item">
-                <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
-              </div>
-              <div class="item">
-                <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
-              </div>
-              <div class="item">
-                <img
-                  src="http://yanxuan.nosdn.127.net/431a09a43914483f4d70aeda8ecb8a59.png?imageView&quality=65&thumbnail=330x330"/>
-                <span class="up">
-               6包/提 谷风一木 软抽...
-             </span>
-                <span class="down">
-               ￥16.9
-             </span>
+                  :src="categorys.listPicUrl"/>
+                <div>
+                 <span class="up">
+                 {{categorys.name}}
+               </span>
+                  <span class="down">
+               ￥{{categorys.counterPrice}}
+               </span>
+                </div>
               </div>
             </div>
           </div>
@@ -257,60 +183,13 @@
         </a>
       </div>
       <div class="cnt">
-        <a href="#" class="m-indexFlashSaleItem">
+        <a href="#" class="m-indexFlashSaleItem" v-for="(item,index) in bigpromotion.itemList" :key="index">
           <div class="imgWrap">
-            <img src="http://yanxuan.nosdn.127.net/5b0aed79b7c9a0555b930ece1cf6c6e4.png">
+            <img :src="item.picUrl">
           </div>
           <div class="price">
-            <span class="actualPrice">￥2899</span>
-            <span class="retailPrice">3599</span>
-          </div>
-        </a>
-        <a href="#" class="m-indexFlashSaleItem">
-          <div class="imgWrap">
-            <img src="http://yanxuan.nosdn.127.net/5b0aed79b7c9a0555b930ece1cf6c6e4.png">
-          </div>
-          <div class="price">
-            <span class="actualPrice">￥2899</span>
-            <span class="retailPrice">3599</span>
-          </div>
-        </a>
-        <a href="#" class="m-indexFlashSaleItem">
-          <div class="imgWrap">
-            <img src="http://yanxuan.nosdn.127.net/5b0aed79b7c9a0555b930ece1cf6c6e4.png">
-          </div>
-          <div class="price">
-            <span class="actualPrice">￥2899</span>
-            <span class="retailPrice">3599</span>
-          </div>
-        </a>
-      </div>
-      <div class="cnt">
-        <a href="#" class="m-indexFlashSaleItem">
-          <div class="imgWrap">
-            <img src="http://yanxuan.nosdn.127.net/5b0aed79b7c9a0555b930ece1cf6c6e4.png">
-          </div>
-          <div class="price">
-            <span class="actualPrice">￥2899</span>
-            <span class="retailPrice">3599</span>
-          </div>
-        </a>
-        <a href="#" class="m-indexFlashSaleItem">
-          <div class="imgWrap">
-            <img src="http://yanxuan.nosdn.127.net/5b0aed79b7c9a0555b930ece1cf6c6e4.png">
-          </div>
-          <div class="price">
-            <span class="actualPrice">￥2899</span>
-            <span class="retailPrice">3599</span>
-          </div>
-        </a>
-        <a href="#" class="m-indexFlashSaleItem">
-          <div class="imgWrap">
-            <img src="http://yanxuan.nosdn.127.net/5b0aed79b7c9a0555b930ece1cf6c6e4.png">
-          </div>
-          <div class="price">
-            <span class="actualPrice">￥2899</span>
-            <span class="retailPrice">3599</span>
+            <span class="actualPrice">￥{{item.originPrice}}</span>
+            <span class="retailPrice">{{item.activityPrice}}</span>
           </div>
         </a>
       </div>
@@ -348,14 +227,12 @@
     </div>
 
     <div class="m-ft g-row">
-      <div>
+      <div class="app">
         <span>下载app</span>
-      </div>
-      <div>
-        电脑版
-      </div>
-    </div>
-  </div>
+        <span>电脑版</span>
+     </div>
+   </div>
+</div>
 </template>
 
 <script>
@@ -389,14 +266,34 @@
        this.$store.dispatch("getKingkongmodule")
        this.$store.dispatch("getShopping")
        this.$store.dispatch("getNewitemlist")
+       this.$store.dispatch("getBigpromotion")
+       this.$store.dispatch("getPersonal")
     },
     computed:{
       ...mapState([
         "newitemlist", //新品首发 大米 牛奶
         "shopping",  //四个爱吃社
         "kingkong", // 居家鞋包服装10个
-        "policydesclist" //退货，退款
-      ])
+        "policydesclist", //退货，退款
+        "bigpromotion", //限时
+        "personal",//三个图，轮播
+      ]),
+      categorysArr() {
+        const {personal} = this
+        const categoryDig = [] // 定义最大的双重数组
+        let arr = [] //定义大数组里面的小数组
+        personal.forEach((c) => {
+
+          if (arr.length === 0) {
+            categoryDig.push(arr)  //如果arr的值小于0 将他放入 双重数组中
+          }
+          arr.push(c)
+          if (arr.length === 3) {  //当arr里面的值到达一定数量后，重新清空放入新数组
+            arr = []
+          }
+        })
+        return categoryDig
+      },
     },
     components: {
       HomeHeader,
@@ -546,6 +443,7 @@
       background: #fff;
       overflow hidden
       box-sizing border-box
+      font-size .42667rem;
     .m-carousel
       position: relative;
       background-color: #fff;
@@ -651,6 +549,8 @@
           color: #fff;
           margin: 0 .13333rem;
           font-family: PingFangSC-Medium;
+          position: relative;
+          top: -0.05rem;
         .colon
           font-size: .37333rem;
 
@@ -712,6 +612,8 @@
              height: .4rem;
              overflow: hidden;
              padding-left: 0;
+             position absolute
+             bottom 0
              .status
                text-align center
                color white
@@ -723,4 +625,17 @@
     background-color: #414141;
     height 3rem
     width 100%
+    .app
+      margin-top 0.6rem
+      display flex
+      justify-content space-evenly
+      span
+        width: 2.5rem;
+        height: 0.6rem;
+        border 1px solid white
+        text-align center
+        line-height 0.6rem;
+        color white
+        font-size 0.3rem
+
 </style>

@@ -5,7 +5,11 @@ import {
   RECEIVE_NEWITEMLIST,
   RECEIVE_POLICYDESCLIST,
   RECEIVE_SHOPPING,
-  RECEIVE_CATEGORY
+  RECEIVE_CATEGORY,
+  RECEIVE_PERSONAL,
+  RECEIVE_GETTABS,
+  RECEIVE_GENERALTHINGS,
+  RECEIVE_GENERALTHINGLIST
 } from "./mutation-types"
 
 
@@ -16,7 +20,11 @@ import {
   reqShopping,
   reqNewitemlist,
   reqBigpromotion,
-  reqCategory
+  reqCategory,
+  reqPersonal,
+  reqGeneralThings,
+  reqGetTabs,
+  reqGeneralThingList
 } from "../api/index"
 
 
@@ -63,7 +71,8 @@ export default {
       commit(RECEIVE_NEWITEMLIST,{newitemlist})
     }
   },
-  //三个图 轮播
+
+  //限时
   async getBigpromotion({commit}){
     const result = await reqBigpromotion()
     if(result.code===0){
@@ -79,6 +88,44 @@ export default {
       const category = result.data
       commit(RECEIVE_CATEGORY,{category})
       fn.typeof === "function" &&  fn()
+    }
+  },
+
+// 三个轮播
+  async getPersonal({commit}){
+    const result = await reqPersonal()
+    if(result.code===0){
+      const personal = result.data
+      commit(RECEIVE_PERSONAL,{personal})
+    }
+  },
+
+  //识物数据
+
+  async getGeneralThings({commit}){
+    const result = await reqGeneralThings()
+    if(result.code==='200'){
+      const generalthings = result.data
+      commit(RECEIVE_GENERALTHINGS,{generalthings})
+    }
+  },
+
+  //识物上的列表
+  async getGetTabs({commit}){
+    const result = await reqGetTabs()
+    if(result.code==='200'){
+      const gettabs = result.data
+      commit(RECEIVE_GETTABS,{gettabs})
+    }
+  },
+
+//识物上的更新
+  /*GeneralThingList*/
+  async getGeneralThingList({commit}){
+    const result = await reqGeneralThingList()
+    if(result.code==='200'){
+      const generalthinglist = result.data.result
+      commit(RECEIVE_GENERALTHINGLIST,{generalthinglist})
     }
   },
 

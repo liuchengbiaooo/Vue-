@@ -12,7 +12,11 @@ Mock.mock('/shopping',{code:0,data:apiData.sceneLightShoppingGuideModule})
 
 Mock.mock('/newitemlist',{code:0,data:apiData.newItemList})
 
-Mock.mock('/bigpromotion',{code:0,data:apiData.bigPromotionModule})
+Mock.mock('/bigpromotion',{code:0,data:apiData.flashSaleModule})
+
+Mock.mock('/personal',{code:0,data:apiData.personalTailorModule})
 
 Mock.mock('/category',{code:0,data:apiCate})
+
+
 console.log("执行Mock")

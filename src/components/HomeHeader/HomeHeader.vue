@@ -17,7 +17,7 @@
             <div class="inner">
               <div class="list"> <!--active-->
                 <div class="tab" :class="{active:currentIndex===index}" v-for="(cate,index) in catelist" :key="index"
-                @click="todo(index)">
+                     @click="todo(index)">
                         <span class="txt">
                           {{cate.name}}
                         </span>
@@ -26,11 +26,22 @@
             </div>
           </header>
         </div>
+        <div class="pindao" v-show="ishow">
+          <span class="quanbu">全部频道</span>
+        </div>
+        <div v-show="ishow" class="moban">
+            <div class="wrap">
+              <ul class="wrapul">
+                <li class="txt" :class="{reive:currentIndex===index}" v-for="(cate,index) in catelist" :key="index"
+                    @click="todo(index)">{{cate.name}}</li> <!--reive-->
+              </ul>
+            </div>
+        </div>
         <div class="toggleWrap">
           <div class="linear"></div>
-          <div class="toggle">
-            <div class="icon"></div>
-          </div>
+          <!--<transition name="xz">-->
+            <div class="toggle" :class="{active:ishow}" @click="come"></div>
+          <!--</transition>-->
         </div>
       </div>
     </div>
@@ -40,28 +51,33 @@
 <script>
   import BScroll from "better-scroll"
   import {mapState} from "vuex"
+
   export default {
     name: "home-page",
-    data(){
-      return{
-        currentIndex:0
+    data() {
+      return {
+        currentIndex: 0,
+        ishow: false
       }
     },
-    mounted(){
-      this.$nextTick(()=>{
-        new BScroll(".inner",{
-          click:true,
-          scrollX:true  //水平滑动
+    mounted() {
+      this.$nextTick(() => {
+        new BScroll(".inner", {
+          click: true,
+          scrollX: true  //水平滑动
         })
       })
       this.$store.dispatch("getCatelist")
     },
-    computed:{
+    computed: {
       ...mapState(["catelist"])
     },
-    methods:{
-      todo(index){
-         this.currentIndex = index
+    methods: {
+      todo(index) {
+        this.currentIndex = index
+      },
+      come() {
+        this.ishow = !this.ishow
       }
     }
   }
@@ -134,7 +150,7 @@
       margin-top -.01333rem
       .m-tabs
         padding-right 1.33333rem
-        >header
+        > header
           display flex
           flex-flow row nowrap
           background-color #fff
@@ -176,6 +192,40 @@
                   text-align: center;
               .tab:first-of-type
                 margin-left 0
+      .pindao
+        position fixed
+        z-index 5
+        top 1.18rem
+        width 100%
+        box-sizing border-box
+        background-color white
+        .quanbu
+          height: .8rem;
+          line-height: .8rem;
+          padding-left: .4rem;
+          font-size: .37333rem;
+      .moban
+        z-index 5
+        .wrap
+          background-color white
+          position fixed
+          top 1.8rem
+          .wrapul
+            margin-top 0.2rem
+            width 100%
+            .txt
+              width: 2rem;
+              height: .74667rem;
+              line-height: .74667rem;
+              text-align: center;
+              float: left;
+              margin-bottom: .53333rem;
+              margin-left: .4rem;
+              background: #FAFAFA;
+              box-sizing border-box
+              &.reive
+                border: 1px solid #b4282d;
+                color: #b4282d;
     .toggleWrap
       display flex
       -webkit-box-flex: 0;
@@ -190,20 +240,22 @@
       .linear
         width: .8rem;
         height: .8rem;
-        background-image: linear-gradient(to right,rgba(255,255,255,0) 0,#fff 100%);
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff 100%);
       .toggle
-        width: 1.33333rem;
-        height: .8rem;
+        margin-right 0.3rem
         text-align: center;
+        width: .4rem;
+        height: .4rem;
         background: #fff;
-        .icon
-          margin-top: .2rem;
-          display: inline-block;
-          vertical-align: middle;
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
-          width: .4rem;
-          height: .4rem;
-          background-image url("//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-down-3-a6045aadfd.png")
+        z-index 99
+        display: inline-block;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transform:rotateZ(0deg);
+        transition:all 0.3s;
+        &.active
+          transform:rotateZ(180deg);
+        background-image url("//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-down-3-a6045aadfd.png")
 </style>
 
