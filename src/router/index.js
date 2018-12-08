@@ -4,6 +4,7 @@ import HomePage from "../pages/HomePage/HomePage.vue"
 import Personage from "../pages/Personage/Personage.vue"
 import Shopping from "../pages/Shopping/Shopping.vue"
 import NotFound from "../components/NotFound/NotFound.vue"
+import Login from "../pages/Login/Login.vue"
 
 import Vue from "vue"
 import Router from "vue-router"
@@ -15,15 +16,24 @@ export default new Router({
   routes: [
     {
       path: '/classify',
-      component: Classify
+      component: Classify,
+      meta:{
+        isShow:true
+      }
     },
     {
       path: '/generalThings',
-      component: GeneralThings
+      component: GeneralThings,
+      meta:{
+        isShow:true
+      }
     },
     {
       path: '/homePage',
-      component: HomePage
+      component: HomePage,
+      meta:{
+        isShow:true
+      }
     },
     {
       path: '/personage',
@@ -31,7 +41,14 @@ export default new Router({
     },
     {
       path: '/shopping',
-      component: Shopping
+      component: Shopping,
+      meta:{
+        isShow:true
+      }
+    },
+    {
+      path: '/login',
+      component: Login
     },
     {
       path: '/',

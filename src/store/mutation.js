@@ -9,7 +9,8 @@ import {
   RECEIVE_PERSONAL,
   RECEIVE_GETTABS,
   RECEIVE_GENERALTHINGS,
-  RECEIVE_GENERALTHINGLIST
+  RECEIVE_GENERALTHINGLIST,
+  RECEIVE_SAVEUSER
 } from "./mutation-types"
 
 
@@ -62,5 +63,10 @@ export default {
   //更新的数据
   [RECEIVE_GENERALTHINGLIST](state,{generalthinglist}){
      state.generalthinglist = generalthinglist
+  },
+
+  //保存用户信息
+  [RECEIVE_SAVEUSER](state,{user}){
+    state.user = user
   }
 }

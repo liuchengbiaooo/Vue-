@@ -8,7 +8,6 @@ export default {
     generalthinglist.forEach((generalthing,index)=>{
       arr=arr.concat(generalthing.topics)
     })
-    console.log('+++',arr)
     return arr
   }
 }

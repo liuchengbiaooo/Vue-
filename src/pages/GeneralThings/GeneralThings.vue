@@ -13,123 +13,72 @@
         </li> <!--active-->
       </ul>
     </div>
-    <div class="m-main-content" v-if="generalthings">
-
-      <!--<div v-for="(generalthing,index) in generalthings" :key="index">
-         <div v-for="(generalth,index) in generalthing.topics" :key="index">
-
-           <div class="m-tpls" v-if="generalth.type===1">
-             <div>
-               <div class="info">
-                 <div class="u-name">
-             <span class="ava">
-            <img
-              :src="generalth.avatar">
-            </span>
-                   <span>{{generalth.nickname}}</span>
-                 </div>
-                 <div class="title">
-                   {{generalth.title}}
-                 </div>
-                 <div class="desc">
-                   {{generalth.subTitle}}
-                 </div>
-                 <div class="u-rcount">
-                   <span>{{generalth.readCount}}人看过</span>
-                 </div>
-               </div>
-               <div class="u-pic">
-                 <img
-                   :src="generalth.picUrl">
-               </div>
-             </div>
-           </div>
-
-           <div v-else class="m-tpls2">
-             <div class="info2">
-               <div class="u-name">
-          <span class="ava">
-            <img
-              :src="generalth.avatar">
-          </span>
-                 <span>{{generalth.nickname}}</span>
-               </div>
-             </div>
-             <div class="title2">
-               {{generalth.title}}
-             </div>
-             <div class="u-pic2">
-               <img
-                 :src="generalth.picUrl">
-             </div>
-             <div class="u-rcount2">
-               <span>{{generalth.readCount}}人看过</span>
-             </div>
-           </div>
 
 
-         </div>
-        </div>-->
-      <!--旧版本，新版本还差一个img的格式-->
-      <div v-for="(groom,index) in groomList" :key="index">
+      <div class="m-main-content" v-if="generalthings">
+        <!--旧版本，新版本还差一个img的格式-->
+        <div class="data">
+          <div v-for="(groom,index) in groomList" :key="index">
 
-        <div class="m-tpls" v-if="groom.type===1">
-          <div>
-            <div class="info">
-              <div class="u-name">
+            <div class="m-tpls" v-if="groom.type===1">
+              <div>
+                <div class="info">
+                  <div class="u-name">
              <span class="ava">
             <img
               :src="groom.avatar">
             </span>
-                <span>{{groom.nickname}}</span>
+                    <span>{{groom.nickname}}</span>
+                  </div>
+                  <div class="title">
+                    {{groom.title}}
+                  </div>
+                  <div class="desc">
+                    {{groom.subTitle}}
+                  </div>
+                  <div class="u-rcount">
+                    <span>{{groom.readCount}}人看过</span>
+                  </div>
+                </div>
+                <div class="u-pic">
+                  <img
+                    :src="groom.picUrl">
+                </div>
               </div>
-              <div class="title">
+            </div>
+
+            <div v-else class="m-tpls2">
+              <div class="info2">
+                <div class="u-name">
+          <span class="ava">
+            <img
+              :src="groom.avatar">
+          </span>
+                  <span>{{groom.nickname}}</span>
+                </div>
+              </div>
+              <div class="title2">
                 {{groom.title}}
               </div>
-              <div class="desc">
-                {{groom.subTitle}}
+              <div class="u-pic2">
+                <img
+                  :src="groom.picUrl">
               </div>
-              <div class="u-rcount">
+              <div class="u-rcount2">
                 <span>{{groom.readCount}}人看过</span>
               </div>
             </div>
-            <div class="u-pic">
-              <img
-                :src="groom.picUrl">
-            </div>
+
           </div>
         </div>
-
-      <!--  <div v-else class="m-tpls2">
-          <div class="info2">
-            <div class="u-name">
-          <span class="ava">
-            <img
-              :src="generalth.avatar">
-          </span>
-              <span>{{generalth.nickname}}</span>
-            </div>
-          </div>
-          <div class="title2">
-            {{generalth.title}}
-          </div>
-          <div class="u-pic2">
-            <img
-              :src="generalth.picUrl">
-          </div>
-          <div class="u-rcount2">
-            <span>{{generalth.readCount}}人看过</span>
-          </div>
-        </div>-->
-
       </div>
-    </div>
   </div>
 </template>
 
 <script>
-  import {mapState,mapGetters} from "vuex"
+  import {mapState, mapGetters} from "vuex"
   import PersonHeader from "../../components/PersonHeader/PersonHeader.vue"
+  import BScroll from "better-scroll"
 
   export default {
     name: "general-things",
@@ -141,7 +90,7 @@
     mounted() {
       this.$store.dispatch("getGeneralThings")
       this.$store.dispatch("getGetTabs")
-      this.$store.dispatch("getGeneralThingList")
+      this.$store.dispatch("getGeneralThingList",)
     },
     computed: {
       ...mapState([
@@ -149,6 +98,15 @@
         "generalthings", //识物首页
       ]),
       ...mapGetters(['groomList'])
+    },
+    watch: {
+      generalthings: function () {
+        this.$nextTick(() => {
+          new BScroll(".m-main-content", {
+            click: true
+          })
+        })
+      }
     },
     methods: {
       todo(index) {
@@ -214,10 +172,13 @@
             color: #B4282D;
             border-bottom: .04rem solid #B4282D;
     .m-main-content
+      height 14rem
+      overflow hidden
       padding: 1.08rem 0 0.98rem 0
       position relative
-      top 0.8rem
+      top 1.18rem
       .m-tpls
+        margin-top 1.2rem
         width: 100%;
         background: #fff;
         margin: .2rem 0;

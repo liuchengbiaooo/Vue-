@@ -9,7 +9,8 @@ import {
   RECEIVE_PERSONAL,
   RECEIVE_GETTABS,
   RECEIVE_GENERALTHINGS,
-  RECEIVE_GENERALTHINGLIST
+  RECEIVE_GENERALTHINGLIST,
+  RECEIVE_SAVEUSER
 } from "./mutation-types"
 
 
@@ -82,12 +83,11 @@ export default {
   },
 
  // 第二页分类
-  async getCategory({commit},fn){
+  async getCategory({commit}){
     const result = await reqCategory()
     if(result.code===0){
       const category = result.data
       commit(RECEIVE_CATEGORY,{category})
-      fn.typeof === "function" &&  fn()
     }
   },
 
@@ -129,5 +129,9 @@ export default {
     }
   },
 
+  //保存用户信息
+  saveUser({commit},user){
+    commit(RECEIVE_SAVEUSER,{user})
+  }
 }
 

@@ -32,9 +32,17 @@ export const reqGeneralThings = () =>ajax(BSAE +'/topic/v1/find/recManual.json')
 export const reqGetTabs = () => ajax(BSAE + '/topic/v1/find/getTabs.json')
 
 //更新识物内容
-export const reqGeneralThingList = () => ajax(BSAE + '/topic/v1/find/recAuto.json?page=2&size=5&exceptIds=5507,5286,4746,4745,5213,5252,518,5446,5288,4037,4035,4210,5339,4635,4640,3583,3860,4040,3438,4648,4489,4364,4513,2747,3882,4168,3773')
+const data = 2;
+export const reqGeneralThingList = () => ajax(BSAE + '/topic/v1/find/recAuto.json?page='+data+' &size=5&exceptIds=5507,5286,4746,4745,5213,5252,518,5446,5288,4037,4035,4210,5339,4635,4640,3583,3860,4040,3438,4648,4489,4364,4513,2747,3882,4168,3773')
 
+const HTTP = "/api"
 
-// http://m.you.163.com/topic/v1/find/recAuto.json?page=2&size=5&exceptIds=5507,5286,4746,4745,5213,5252,518,5446,5288,4037,4035,4210,5339,4635,4640,3583,3860,4040,3438,4648,4489,4364,4513,2747,3882,4168,3773
+//获取一次性短信验证码
+export const reqSendCode = (phone) => ajax(HTTP + '/sendcode',{phone})
 
+//短信验证码登录
+export const reqSmsLogin = (phone,code) => ajax(HTTP + '/login_sms',{phone,code},'POST')
+
+//账号密码登录
+export const reqPwdLogin =({name,pwd,captcha}) => ajax(HTTP+'/login_pwd',{name,pwd,captcha},'POST')
 

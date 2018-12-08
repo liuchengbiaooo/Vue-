@@ -10,11 +10,11 @@
       </div>
     </div>
     <div class="btnWrap">
-     <div class="button">
+     <div class="button" @click="$router.replace('/login')">
        <i class="icon"></i>
        <span class="txt">手机号码登录</span>
      </div>
-     <div class="button" id="to">
+     <div class="button" id="to" @click="$router.replace('/login')">
         <i id="togo"></i>
         <span class="txt" id="todo">短信验证登录</span>
       </div>

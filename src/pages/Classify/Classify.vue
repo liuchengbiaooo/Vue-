@@ -6,7 +6,7 @@
         <span class="placeholder">搜索商品, 共19971款好物</span>
       </div>
     </div>
-    <div v-if="category.length>0">
+    <div  v-if="category.length>0">
       <div class="m-cateNavVertWrap">
         <ul class="m-cateNavVert">
           <li class="item" v-for="(cate,index) in category" :key="index"
@@ -17,38 +17,40 @@
           </li>
         </ul>
       </div>
-     <div>
-       <div class="m-subCateList">
-         <div class="banner"
-              :style="{backgroundImage:`url('${categorys.wapBannerUrl}')`}">
-           <div class="cnt"></div>
-         </div>
-         <div class="cateList">
-           <ul class="list">
-             <li class="cateItem" v-for="(cate,index) in categorys.subCateList" :key="index">
-               <div class="cateListcao" v-if="cate.categoryList">
-                 <div class="nima">{{cate.name}}
-                   <ul class="uls">
-                     <li class="lis" v-for="(category,index) in cate.categoryList" :key="index">
-                       <div class="dag">
-                         <img class="mg" :src="category.wapBannerUrl"/>
-                       </div>
-                       <div class="name">{{category.name}}</div>
-                     </li>
-                   </ul>
-                 </div>
-               </div>
-               <div v-else>
-                 <div class="cateImgWrapper">
-                   <img :src="cate.bannerUrl"/>
-                 </div>
-                 <div class="name">{{cate.name}}</div>
-               </div>
-             </li>
-           </ul>
-         </div>
-       </div>
-     </div>
+      <div class="m-subCateList">
+          <div>
+            <div class="banner"
+                    :style="{backgroundImage:`url('${categorys.wapBannerUrl}')`}">
+            <div class="cnt"></div>
+          </div>
+            <div>
+              <div class="cateList">
+                <ul class="list">
+                  <li class="cateItem" v-for="(cate,index) in categorys.subCateList" :key="index">
+                    <div class="cateListcao" v-if="cate.categoryList">
+                      <div class="nima">{{cate.name}}
+                        <ul class="uls">
+                          <li class="lis" v-for="(category,index) in cate.categoryList" :key="index">
+                            <div class="dag">
+                              <img class="mg" :src="category.wapBannerUrl"/>
+                            </div>
+                            <div class="name">{{category.name}}</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div v-else>
+                      <div class="cateImgWrapper">
+                        <img :src="cate.bannerUrl"/>
+                      </div>
+                      <div class="name">{{cate.name}}</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </template>
@@ -65,16 +67,21 @@
       }
     },
     mounted() {
-      this.$store.dispatch("getCategory", () => {
+      this.$store.dispatch("getCategory")
+    },
+    watch: {
+      category: function () {
         this.$nextTick(() => {
           new BScroll(".m-subCateList", {
-            class: true
-          }),
-          new BScroll(".m-cateNavVert", {
-              class: true
-            })
+            click: true
+          })
         })
-      })
+        this.$nextTick(() => {
+          new BScroll(".m-cateNavVertWrap", {
+            click: true
+          })
+        })
+      }
     },
     computed: {
       ...mapState(["category"]),
@@ -114,6 +121,7 @@
       font-size: .37333rem;
       border-radius: .10667rem;
       background-color: #ededed;
+      overflow hidden
       .icon
         width: .37333rem;
         height: .37333rem;
@@ -125,6 +133,8 @@
         color: #666;
 
   .m-cateNavVertWrap
+    overflow hidden
+    height 16rem
     margin-top: 1.1rem;
     z-index: 4;
     width: 2.16rem;
@@ -135,7 +145,6 @@
     border-right 1px solid rgba(0, 0, 0, .15)
     .m-cateNavVert
       padding-bottom: 1.84rem;
-      padding: .53333rem 0;
       .item
         width: 100%;
         height: .66667rem;
@@ -169,6 +178,8 @@
     width: 7.8rem;
     box-sizing border-box
     padding: .4rem .4rem .28rem;
+    height 16rem
+    overflow hidden
     top-border-1px(rgba(0, 0, 0, .15))
     .banner
       position: relative;
@@ -190,6 +201,7 @@
 
     .cateList
       float left
+      overflow hidden
       .cateItem
         display: inline-block;
         margin-right: 0.35322rem;

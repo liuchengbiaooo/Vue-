@@ -1,5 +1,5 @@
 <template>
-  <nav class="m-tabBar" v-if="$route.path!=='/personage'">
+  <nav class="m-tabBar" v-if="$route.meta.isShow">
     <a class="item" @click="todo('/homepage')" :class="{active:isShow('/homepage')}">
       <i name="tabBar-index" class="u-icon u-icon-tabBar-index"></i>
       <span class="txt">首页</span>
