@@ -10,6 +10,7 @@
           <a href="javascript:;" :class="{on:!loginMode}" @click="loginMode=false">密码登录</a>
         </div>
       </div>
+
       <div class="login_content">
         <form>
           <div :class="{on:loginMode}">
@@ -51,7 +52,6 @@
         </form>
         <a href="javascript:;" class="about_us">关于我们</a>
       </div>
-
 
       <a href="javascript:" class="go_back" @click="$router.replace('/personage')">
         <i class="iconfont icon-jiantou2"></i>

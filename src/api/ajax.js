@@ -1,40 +1,55 @@
-/*
-能发送ajax请求的函数
-包装axios
-返回值是promise对象
- */
-import axios from 'axios'
+import axios from "axios";
+import qs from 'querystring';
+const CancelToken = axios.CancelToken;
+let cancel;
 
-export default function ajax(url, data={}, method='GET') {
-
-  return new Promise((resolve, reject) => {
-    let promise
-    if(method==='GET') {
-      //return axios.get(url, {params: data})
-      // 拼query请求参数串
-      let queryStr = ''
-      Object.keys(data).forEach(key => {
-        const value = data[key]
-        queryStr += `${key}=${value}&`
-      })
-      // let queryStr = Object.keys(data).reduce((pre, key) => pre + `${key}=${data[key]}&`, '')
-
-      if(queryStr!=='') { // username=tom&password=123&
-        queryStr = queryStr.substring(0, queryStr.length-1) // username=tom&password=123
-        url += '?' + queryStr  // /login/?username=tom&password=123
+export default function ajax(url,data={},method="GET"){
+  const {onlyOne}=data;
+  return new Promise((resolve,reject)=>{
+    let promise;
+    if(onlyOne){
+      delete data.onlyOne;
+      if(typeof cancel==="function"){
+        cancel();
+        console.log('取消一个');
       }
-      promise = axios.get(url) // url?username=tom&password=123
-      // return axios.get(url, {params: data}) // url?username=tom&password=123
-    } else {
-      promise = axios.post(url, data)
     }
-
-    promise.then(response => {
-      // 异步请求成功
+    if(method=="GET"){
+      if(JSON.stringify(data) != "{}"){
+        // let str="";
+        // Object.keys(data).forEach((key)=>{
+        //     str+=`${key}=${data[key]}&`
+        // })
+        // url+="?"+str.substring(0,str.length-1);
+        if(onlyOne){
+          promise = axios.get(url,{
+            params:data,
+            cancelToken:new CancelToken(function(c){
+              cancel=c;
+            })
+          });
+        }else{
+          promise = axios.get(url,{params:data});
+        }
+      }
+      else{
+        promise = axios.get(url);
+      }
+    }else{
+      if(method=="POST"){
+        promise=axios.post(url,data)
+      }else if(method=="POSTFORM"){
+        promise=axios({
+          url,
+          data:qs.stringify(data),
+          headers: { 'content-type': 'application/x-www-form-urlencoded' },
+          method: 'POST',
+        })
+      }
+    }
+    promise.then((response)=>{
       resolve(response.data)
-    }).catch(error => {
-      reject(error)
-    })
+      cancel=null;
+    }).catch()
   })
 }
-

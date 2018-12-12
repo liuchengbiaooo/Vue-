@@ -27,6 +27,7 @@
               <div class="cateList">
                 <ul class="list">
                   <li class="cateItem" v-for="(cate,index) in categorys.subCateList" :key="index">
+
                     <div class="cateListcao" v-if="cate.categoryList">
                       <div class="nima">{{cate.name}}
                         <ul class="uls">
@@ -39,6 +40,8 @@
                         </ul>
                       </div>
                     </div>
+
+
                     <div v-else>
                       <div class="cateImgWrapper">
                         <img :src="cate.bannerUrl"/>

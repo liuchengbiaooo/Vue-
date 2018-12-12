@@ -5,6 +5,7 @@ import Personage from "../pages/Personage/Personage.vue"
 import Shopping from "../pages/Shopping/Shopping.vue"
 import NotFound from "../components/NotFound/NotFound.vue"
 import Login from "../pages/Login/Login.vue"
+import Search from "../pages/Search/Search"
 
 import Vue from "vue"
 import Router from "vue-router"
@@ -49,6 +50,10 @@ export default new Router({
     {
       path: '/login',
       component: Login
+    },
+    {
+      path:"/search",
+      component:Search
     },
     {
       path: '/',

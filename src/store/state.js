@@ -9,6 +9,8 @@ export default {
   personal:[],//三个图，轮播
   gettabs:[], //识物的分类
   generalthings:[], //识物分类
-  generalthinglist:[], //更新的数据
   user:[],//客户的信息
+  searchs:[],//搜索功能
+  searchinit:[],
+  searchgoods:{}
 }

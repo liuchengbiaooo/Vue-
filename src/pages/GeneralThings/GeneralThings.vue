@@ -15,68 +15,67 @@
     </div>
 
 
-      <div class="m-main-content" v-if="generalthings">
-        <!--旧版本，新版本还差一个img的格式-->
-        <div class="data">
-          <div v-for="(groom,index) in groomList" :key="index">
+    <div class="m-main-content" v-if="generalthings">
+      <!--旧版本，新版本还差一个img的格式-->
+      <div class="data">
+        <div v-for="(groom,index) in generalthings" :key="index">
 
-            <div class="m-tpls" v-if="groom.type===1">
-              <div>
-                <div class="info">
-                  <div class="u-name">
-             <span class="ava">
-            <img
-              :src="groom.avatar">
-            </span>
-                    <span>{{groom.nickname}}</span>
-                  </div>
-                  <div class="title">
-                    {{groom.title}}
-                  </div>
-                  <div class="desc">
-                    {{groom.subTitle}}
-                  </div>
-                  <div class="u-rcount">
-                    <span>{{groom.readCount}}人看过</span>
-                  </div>
-                </div>
-                <div class="u-pic">
-                  <img
-                    :src="groom.picUrl">
-                </div>
-              </div>
-            </div>
-
-            <div v-else class="m-tpls2">
-              <div class="info2">
+          <div class="m-tpls" v-if="groom.type===1">
+            <div>
+              <div class="info">
                 <div class="u-name">
-          <span class="ava">
-            <img
-              :src="groom.avatar">
-          </span>
+                  <span class="ava">
+                      <img :src="groom.avatar">
+                  </span>
                   <span>{{groom.nickname}}</span>
                 </div>
+                <div class="title">
+                  {{groom.title}}
+                </div>
+                <div class="desc">
+                  {{groom.subTitle}}
+                </div>
+                <div class="u-rcount">
+                  <span>{{groom.readCount}}人看过</span>
+                </div>
               </div>
-              <div class="title2">
-                {{groom.title}}
-              </div>
-              <div class="u-pic2">
+              <div class="u-pic">
                 <img
                   :src="groom.picUrl">
               </div>
-              <div class="u-rcount2">
-                <span>{{groom.readCount}}人看过</span>
+            </div>
+          </div>
+
+          <div v-else class="m-tpls2">
+            <div class="info2">
+              <div class="u-name">
+                <span class="ava">
+            <img
+              :src="groom.avatar">
+          </span>
+                <span>{{groom.nickname}}</span>
               </div>
             </div>
-
+            <div class="title2">
+              {{groom.title}}
+            </div>
+            <div class="u-pic2">
+              <img
+                :src="groom.picUrl">
+            </div>
+            <div class="u-rcount2">
+              <span>{{groom.readCount}}人看过</span>
+            </div>
           </div>
+
         </div>
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-  import {mapState, mapGetters} from "vuex"
+  import {mapState} from "vuex"
   import PersonHeader from "../../components/PersonHeader/PersonHeader.vue"
   import BScroll from "better-scroll"
 
@@ -84,26 +83,32 @@
     name: "general-things",
     data() {
       return {
-        Mayindex: 0
+        Mayindex: 0,
+        data: 1
       }
     },
     mounted() {
       this.$store.dispatch("getGeneralThings")
       this.$store.dispatch("getGetTabs")
-      this.$store.dispatch("getGeneralThingList",)
     },
     computed: {
       ...mapState([
         "gettabs", //列表
         "generalthings", //识物首页
       ]),
-      ...mapGetters(['groomList'])
     },
     watch: {
       generalthings: function () {
         this.$nextTick(() => {
-          new BScroll(".m-main-content", {
-            click: true
+          this.scroll = new BScroll(".m-main-content", {
+            click: true,
+            pullUpLoad: true
+          });
+          let data = 1;
+          this.scroll.on("pullingUp", () => {
+            const _fn = this.fn();
+            data++;
+            this.$store.dispatch("getGeneralThingList", {_fn,data})
           })
         })
       }
@@ -111,6 +116,10 @@
     methods: {
       todo(index) {
         this.Mayindex = index
+      },
+      fn() {
+        this.scroll.finishPullUp();
+        this.scroll.refresh();
       }
     },
     components: {
@@ -172,7 +181,7 @@
             color: #B4282D;
             border-bottom: .04rem solid #B4282D;
     .m-main-content
-      height 14rem
+      height 20rem
       overflow hidden
       padding: 1.08rem 0 0.98rem 0
       position relative

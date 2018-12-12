@@ -14,3 +14,8 @@ export const RECEIVE_GETTABS = 'receive_gettabs' //识物类别
 export const RECEIVE_GENERALTHINGLIST = 'receive_generalthinglist' //更新的数据
 
 export const RECEIVE_SAVEUSER = 'RECEIVE_SAVEUSER' //保存用户信息
+
+export const RECEIVE_SEARCHRESULT ='RECEIVE_SEARCHRESULT' //搜索功能
+
+export const RECEIVE_SEARCHINIT ='receive_searchinit'
+export const RECEIVE_SEARCHGOODS='receive_searchgoods'

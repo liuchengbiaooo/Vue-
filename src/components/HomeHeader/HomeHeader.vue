@@ -3,7 +3,7 @@
     <div class="m-indexHd">
       <div class="line">
         <a href="#" class="logo"></a>
-        <div class="m-topSearchIpt ipt">
+        <div class="m-topSearchIpt ipt" @click="$router.replace('/search')">
           <i class="icon"></i>
           <span class="placeholder">
                 搜索商品, 共19915款好物
@@ -254,8 +254,9 @@
         background-size: 100% 100%;
         transform:rotateZ(0deg);
         transition:all 0.3s;
+        background-image url("//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-down-3-a6045aadfd.png")
         &.active
           transform:rotateZ(180deg);
-        background-image url("//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-down-3-a6045aadfd.png")
+
 </style>
 

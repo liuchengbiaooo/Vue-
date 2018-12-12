@@ -10,7 +10,10 @@ import {
   RECEIVE_GETTABS,
   RECEIVE_GENERALTHINGS,
   RECEIVE_GENERALTHINGLIST,
-  RECEIVE_SAVEUSER
+  RECEIVE_SAVEUSER,
+  RECEIVE_SEARCHRESULT,
+  RECEIVE_SEARCHINIT,
+  RECEIVE_SEARCHGOODS
 } from "./mutation-types"
 
 
@@ -25,7 +28,10 @@ import {
   reqPersonal,
   reqGeneralThings,
   reqGetTabs,
-  reqGeneralThingList
+  reqGeneralThingList,
+  reqSearchResult,
+  reqSearchInit,
+  reqSearchGoods
 } from "../api/index"
 
 
@@ -105,8 +111,9 @@ export default {
   async getGeneralThings({commit}){
     const result = await reqGeneralThings()
     if(result.code==='200'){
-      const generalthings = result.data
-      commit(RECEIVE_GENERALTHINGS,{generalthings})
+      const Shilists = result.data
+      console.log(Shilists)
+      commit(RECEIVE_GENERALTHINGS,{Shilists})
     }
   },
 
@@ -121,17 +128,47 @@ export default {
 
 //识物上的更新
   /*GeneralThingList*/
-  async getGeneralThingList({commit}){
-    const result = await reqGeneralThingList()
+  async getGeneralThingList({commit},{fn,data}){
+    let data1 = data
+    data1=data1+1
+
+    console.log("ss",data1)
+    const result = await reqGeneralThingList(data1)
     if(result.code==='200'){
-      const generalthinglist = result.data.result
-      commit(RECEIVE_GENERALTHINGLIST,{generalthinglist})
+      const Shilist = result.data.result
+      commit(RECEIVE_GENERALTHINGLIST,{Shilist})
+      typeof fn === "function" && fn()
     }
   },
 
   //保存用户信息
   saveUser({commit},user){
     commit(RECEIVE_SAVEUSER,{user})
+  },
+
+  //
+  async getSearchResult({commit},{keywordPrefix}){
+    const result = await reqSearchResult(keywordPrefix)
+    if(result.code==='200'){
+      const searchs = result.data
+      commit(RECEIVE_SEARCHRESULT,{searchs})
+    }
+  },
+
+  async getSearchInit({commit}){
+    const result = await reqSearchInit()
+    if(result.code==='200'){
+      const searchinit = result.data
+      commit(RECEIVE_SEARCHINIT,{searchinit})
+    }
+  },
+
+  async getSearchGoods({commit},{keyword}){
+    const result = await reqSearchGoods(keyword)
+    if(result.code==='200'){
+      const searchgoods = result.data
+      commit(RECEIVE_SEARCHGOODS,{searchgoods})
+    }
   }
 }
 

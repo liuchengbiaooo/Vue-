@@ -10,7 +10,10 @@ import {
   RECEIVE_GETTABS,
   RECEIVE_GENERALTHINGS,
   RECEIVE_GENERALTHINGLIST,
-  RECEIVE_SAVEUSER
+  RECEIVE_SAVEUSER,
+  RECEIVE_SEARCHRESULT,
+  RECEIVE_SEARCHINIT,
+  RECEIVE_SEARCHGOODS
 } from "./mutation-types"
 
 
@@ -56,17 +59,39 @@ export default {
   },
 
   //识物的数据
-  [RECEIVE_GENERALTHINGS](state,{generalthings}){
-     state.generalthings = generalthings
+  [RECEIVE_GENERALTHINGS](state,{Shilists}){
+     let ShiWulist =[]
+    Shilists.forEach((list,index)=>{
+         ShiWulist = ShiWulist.concat(list.topics)
+      })
+     console.log(ShiWulist)
+     state.generalthings = ShiWulist
   },
 
   //更新的数据
-  [RECEIVE_GENERALTHINGLIST](state,{generalthinglist}){
-     state.generalthinglist = generalthinglist
+  [RECEIVE_GENERALTHINGLIST](state,{Shilist}){
+    let ShiWulist = []
+    Shilist.forEach((list,index)=>{
+      ShiWulist = ShiWulist.concat(list.topics)
+    })
+    console.log(ShiWulist)
+    state.generalthings = state.generalthings.concat(ShiWulist)
   },
 
   //保存用户信息
   [RECEIVE_SAVEUSER](state,{user}){
     state.user = user
+  },
+
+  [RECEIVE_SEARCHRESULT](state,{searchs}){
+     state.searchs=searchs
+  },
+
+  [RECEIVE_SEARCHINIT](state,{searchinit}){
+     state.searchinit=searchinit
+  },
+
+  [RECEIVE_SEARCHGOODS](state,{searchgoods}){
+     state.searchgoods=searchgoods
   }
 }
